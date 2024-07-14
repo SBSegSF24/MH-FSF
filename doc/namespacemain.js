@@ -1,0 +1,27 @@
+var namespacemain =
+[
+    [ "DefaultHelpParser", "classmain_1_1_default_help_parser.html", "classmain_1_1_default_help_parser" ],
+    [ "float_range", "namespacemain.html#ae3e18ad7cd15532f629377cdeac8f5de", null ],
+    [ "get_methods", "namespacemain.html#a998ccd693d04561fb847ac3c94891299", null ],
+    [ "list_methods", "namespacemain.html#a26ad776acc5ee077a5ea7d4862a52137", null ],
+    [ "load_methods_args", "namespacemain.html#a0ae93e1d36f92166b88092b28bf5e647", null ],
+    [ "modify_choices", "namespacemain.html#aab474ead28bd5ac8ef1df07f6f0cd5d9", null ],
+    [ "parallelize_func", "namespacemain.html#a47dac83d374a4d228b93a7c5d13cfcd0", null ],
+    [ "parse_args", "namespacemain.html#a423025eb79068e170c6b3cf3255efb97", null ],
+    [ "run_fs_method", "namespacemain.html#a0bb161740eb9fd51b1618f53a320d8d1", null ],
+    [ "args", "namespacemain.html#a10926d7b7053badc9647defe0abb8adc", null ],
+    [ "dataset", "namespacemain.html#a2c3d4023a1838d4482f92941777ed21e", null ],
+    [ "datasets", "namespacemain.html#a2ade46bf256d482d3da8675088dc7421", null ],
+    [ "format", "namespacemain.html#a758a4b3c52742d78aa30e49d058acea4", null ],
+    [ "logger", "namespacemain.html#ae1d4a0295c904f672a1f044188274bf1", null ],
+    [ "methods", "namespacemain.html#ad0a71fa7b4080e971323a6c3b1c16331", null ],
+    [ "methods_dict", "namespacemain.html#ab5266e5c18743fcedd05ca6150926f73", null ],
+    [ "methods_path", "namespacemain.html#a0dc96da6f16d912fd9924b7816d96a94", null ],
+    [ "methods_to_exec", "namespacemain.html#a066c24bc92e35526b35a22710a72ec62", null ],
+    [ "methods_types", "namespacemain.html#a6baebae3c6f30a65916ccc1ec2f52581", null ],
+    [ "ml_models", "namespacemain.html#a1b4458d55eaa0b6d0b24dbc1d2e3824c", null ],
+    [ "msg", "namespacemain.html#ad1a6c21cf97bb2d28f1b3656edf22052", null ],
+    [ "output_e", "namespacemain.html#ad627a463a7e6da573a75e9f1daf700a3", null ],
+    [ "selected_methods", "namespacemain.html#af58fb6735dbe6730810c2d99f27874cd", null ],
+    [ "selected_types", "namespacemain.html#a0e8d1bada73c3e2c4ba7f9bb6cce804c", null ]
+];

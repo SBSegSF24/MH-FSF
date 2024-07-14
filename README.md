@@ -23,7 +23,7 @@ cd MH-FSF
 
 ```
 
-## Building and running in Docker :whale:
+## :whale: Building and running in Docker
 
 1. Installing Docker and building your image.
 ```bash
@@ -40,7 +40,7 @@ docker build -t mhfsf:latest .
 
 **Note**: It will take around 3 minutes to run on a Intel Core i7-9700 CPU 3.00GHz, 8 cores, 16 GB RAM.
 
-**Non persistent**: Output files will be deleted when container finishes its execution. 
+**Non persistent**: Output files will be deleted when container finishes its execution.
 ```bash
 
 docker run -it mhfsf
@@ -162,7 +162,33 @@ MH-FSF has been tested in following environments:
 **Hardware**: Intel Core i7-9700 CPU 3.00GHz, 8 cores, 16 GB RAM. **Software**: Debian GNU 11 e 12, Python 3.9.2 e 3.11.2, Docker 20.10.5 e 24.07.
 
 
-## Link to papers (specific methods)
+## :bar_chart: Reproduction of paper's experiments
+
+Run the following commands to reproduce the results presented in article.
+
+**Balanced datasets**
+
+```bash
+
+python3 main.py run --all-fs-types --all-fs-methods --all-ml-models -d datasets/balanced/*.csv
+
+```
+
+**Complete datasets**
+
+
+```bash
+
+python3 main.py run --all-fs-types --all-fs-methods --all-ml-models -d datasets/*.csv
+
+```
+
+## :books: Code documentation
+
+The code documentation is available in HTML format in **doc** folder. To access the documentation, open [index.html](doc/index.html) file in your local environment.
+
+
+## :memo: Link to papers (specific methods)
 - FSDroid:
   https://link.springer.com/article/10.1007/s11042-020-10367-w
 - SemiDroid:
