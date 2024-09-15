@@ -115,3 +115,23 @@ def find_constant_features(df):
         if df[column].nunique() == 1:
             constant_features.append(column)
     return constant_features
+
+def check_files(dirs, logger):
+    """
+    Check if files 'about.desc' and 'run.py' exist in each directory.
+
+    Parameters:
+    dirs (dict): Dictionary with paths of each method.
+
+    Returns:
+    boolean: True if all methods have required files.
+    """
+    all_ok = True
+    for methods_type, methods in dirs.items():
+        for method in methods:
+            about_desc = os.path.join('methods', methods_type, method, 'about.desc')
+            run_py = os.path.join('methods', methods_type, method, 'run.py')
+            if not (os.path.isfile(about_desc) and os.path.isfile(run_py)):
+                all_ok = False
+                logger.error(f'Method {method} Does Not Have Required Files')
+    return all_ok

@@ -12,6 +12,12 @@ from termcolor import colored
 from utils import *
 from graphs import *
 
+available_ml_models = {
+    'svm': svm.SVC(),
+    'rf': RandomForestClassifier(random_state = 0),
+    'knn': KNeighborsClassifier()
+}
+
 def get_classifier(ml_model):
     """
     Returns the appropriate classifier based on the model name.
@@ -22,12 +28,7 @@ def get_classifier(ml_model):
     Returns:
     clf (object): Instance of the classifier.
     """
-    if ml_model == 'svm':
-        clf = svm.SVC()
-    elif ml_model == 'rf':
-        clf = RandomForestClassifier(random_state = 0)
-    elif ml_model == 'knn':
-        clf = KNeighborsClassifier()
+    clf = available_ml_models.get(ml_model)
     return clf
 
 def cross_validation(classifier, X, y, n_folds = 5):

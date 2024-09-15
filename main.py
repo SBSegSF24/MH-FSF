@@ -145,7 +145,7 @@ def parse_args(argv):
         '-d', '--datasets', nargs = '+', metavar = 'DATASET',
         help = 'One or More Datasets (csv Files). For All Datasets in Directory Use: [DIR_PATH]/*.csv',
         type = str,  required = True)
-    parser.add_argument('-th','--threshold', metavar = 'FLOAT',
+    action_run.add_argument('-th','--threshold', metavar = 'FLOAT',
         help = 'Percent of Features to be Selected (Ranking Methods). Default: 0.5',
         type = float_range(0.0, 1.0), default = 0.5)
     action_run.add_argument('-c', '--class-column', type = str, default = 'class', metavar = 'CLASS_COLUMN',
@@ -247,7 +247,7 @@ def run_fs_method(args, path, dataset, method_to_exec):
     try:
         model_instance.run(args, path, dataset)
         selected_ml_models = args.ml_models if args.ml_models else ml_models
-        run_ml_models(args, ml_models, method, path)
+        run_ml_models(args, selected_ml_models, method, path)
     except Exception as e:
         msg = f'Error Executing Method {method} in {os.path.basename(path)}: {e}'
         logger.exception(msg)
@@ -266,7 +266,8 @@ if __name__ == '__main__':
     methods_path = 'methods'
     methods_types = get_dir_list(methods_path)
     methods_dict = get_methods()
-    ml_models = ['knn', 'rf', 'svm']
+    check_files(methods_dict, logger)
+    ml_models = list(available_ml_models.keys())
     args = parse_args(sys.argv[1:])
 
     if args.action == 'list':
